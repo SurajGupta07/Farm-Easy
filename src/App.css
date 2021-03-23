@@ -1,0 +1,30 @@
+@import "https://eloquentui.netlify.app/styles/app.css";
+
+.App {
+  font-family: sans-serif;
+}
+
+.headerTitle{
+  margin-top:1rem; 
+  text-align:center;
+}
+
+.sub-header{
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item-list{
+  margin-left: 1rem;
+}
+
+.card-spacing{
+  margin-left: 10rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.add-spacing{
+  margin-left: 1rem;
+}
