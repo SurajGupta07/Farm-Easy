@@ -5,13 +5,17 @@
 }
 
 .headerTitle{
-  margin-top:1rem; 
-  text-align:center;
+  display: inline;
 }
 
 .sub-header{
   text-align: center;
-  margin-top: 1rem;
+  padding-top: 8rem;
+  margin-bottom: 1rem;
+}
+
+.main-header{
+  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -27,4 +31,35 @@
 
 .add-spacing{
   margin-left: 1rem;
+}
+
+.headerLogo{
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 1rem;
+}
+
+.buttonLogo{
+  background: transparent;
+  border-color: transparent; 
+  outline: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  display: inline;
+}
+
+.buttonLogo:hover{
+  background-color: #DDD6FE;
+  border-radius: 1rem;
+}
+
+.backgroundColor{
+  background-color: #A78BFA;
+}
+
+.mainNavbar{
+  margin-top: 0px !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
