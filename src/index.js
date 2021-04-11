@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -7,9 +12,11 @@ import {CartProvider} from '../src/CartContext'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Router>
     <CartProvider>
       <App />
     </CartProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
