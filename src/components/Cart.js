@@ -94,9 +94,9 @@ export function Checkout(){
 }
 
 export function CartHeader() {
-    const { itemsInCart } = useCart();
-    return <h3 className="sub-header">Items in Cart {itemsInCart.length}</h3>;
-  }
+  const { itemsInCart } = useCart();
+  return <h3 className="sub-header">Items in Cart {itemsInCart.length}</h3>;
+}
 
 export function Cart(){ 
   const {itemsInCart} = useCart();
