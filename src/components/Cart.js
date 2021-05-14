@@ -1,4 +1,5 @@
-import {useCart} from '../CartContext'
+import {useCart} from '../contexts/CartContext'
+import {useProduct} from "../contexts/CartContext"
 
 export function CartHeader() {
   const { itemsInCart } = useCart();
@@ -7,6 +8,7 @@ export function CartHeader() {
 
 
 function ShowItem({item}){
+  const { itemsInCart, setItemsInCart } = useCart();
   return(
     <div className="card card-body card-spacing">
       <img src={item.image} alt="Logo" className="card-img" />
@@ -17,11 +19,11 @@ function ShowItem({item}){
       <button>-</button>
       <button className="default-button">Remove Item</button>
     </div>
-  )
+  );
 }
 
 export function Cart(){ 
-  const {itemsInCart} = useCart();
+  const { itemsInCart } = useCart();
   return <>
   <h1 className="main-header">Cart</h1>
   <ul>

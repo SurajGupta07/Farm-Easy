@@ -1,23 +1,13 @@
-import React, { useRef, useEffect, useState } from 'react';
-import {useCart} from '../CartContext'
-import axios from "axios";
+import {useCart} from '../contexts/CartContext'
+import { useProduct } from "../contexts/ProductContext"
 
 export const ProductList = () => {
-    const {setItemsInCart} = useCart();
-    const [products, setProducts] = useState(null);
-  
-    useEffect(() => {
-      axios 
-      .get("https://express-practice.surajgupta07.repl.co/products")
-      .then((response) => {
-        setProducts(response.data.products)
-      })
-    })
-  
+    const { setItemsInCart } = useCart();
+    const { products } = useProduct();
     function getProductList(){
       return products.map(
-        ({id, name, price, image, availability}) => (
-          <div key = { id } className="card card-body card-spacing">
+        ({name, price, image, availability}) => (
+          <div className="card card-body card-spacing">
             <img src={image} alt="Logo" className="card-img" />
             <h2 className="card-title">{name}</h2>
             <p className="card-text">{price}</p>
@@ -32,7 +22,6 @@ export const ProductList = () => {
   
     return(
       <div>
-        <h1>Products</h1>
         {products ? getProductList(products) : <div>Loading Products...</div>}
       </div>
     )
