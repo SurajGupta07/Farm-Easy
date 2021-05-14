@@ -1,9 +1,11 @@
 import './App.css';
-import {Routes, Route, Navigate} from 'react-router-dom';
-import {Checkout, CartHeader, ProductList, Cart} from '../src/components/Cart'
-import Navbar from "../src/components/Navbar"
-import Login from "../src/components/Login"
-import Signup from "../src/components/Signup"
+import {Routes, Route, Navigate} from "react-router-dom";
+import { CartHeader, Cart} from "../src/components/Cart"
+import { ProductList } from "../src/components/Product"
+import { Checkout } from "../src/components/Checkout"
+import Navbar from "./components/Header/Navbar"
+import Login from "./components/Authentication/Login"
+import Signup from "./components/Authentication/Signup"
 import ForgotPassword from "../src/components/ForgotPassword"
 import { useState } from 'react';
 
