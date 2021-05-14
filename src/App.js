@@ -8,6 +8,7 @@ import Login from "./components/Authentication/Login"
 import Signup from "./components/Authentication/Signup"
 import ForgotPassword from "../src/components/ForgotPassword"
 import { useState } from 'react';
+import Footer from "../src/components/Footer"
 
 function PrivateRoute({ login, ...props }){
     return login ? <Route {...props} /> : <Navigate replace to="/login" /> 
@@ -29,6 +30,7 @@ function App() {
                     <Route path="forgot-password" element={< ForgotPassword />}/>
                     <PrivateRoute path="/checkout" login={login} element={< Checkout />}/>
                 </Routes>
+                <Footer />
             </div>
 
         </div>

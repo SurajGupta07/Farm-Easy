@@ -1,5 +1,4 @@
 import {useCart} from '../contexts/CartContext'
-import {useProduct} from "../contexts/CartContext"
 
 export function CartHeader() {
   const { itemsInCart } = useCart();
@@ -7,17 +6,13 @@ export function CartHeader() {
 }
 
 
-function ShowItem({item}){
-  const { itemsInCart, setItemsInCart } = useCart();
+function ShowItem({product}){
   return(
     <div className="card card-body card-spacing">
-      <img src={item.image} alt="Logo" className="card-img" />
-      <h2 className="card-title">{item.name}</h2>
-      <p className="card-text">{item.price}</p>
-      <button>+</button>
-      {item.quantity}
-      <button>-</button>
-      <button className="default-button">Remove Item</button>
+      <img src={product.image} alt="Logo" className="card-img" />
+      <h2 className="card-title">{product.name}</h2>
+      <p className="card-text">{product.price}</p>
+      <p className="card-text">{product.availability}</p>
     </div>
   );
 }
@@ -27,7 +22,7 @@ export function Cart(){
   return <>
   <h1 className="main-header">Cart</h1>
   <ul>
-    {itemsInCart.map((item) => (<li><ShowItem item={item} /></li>))}
+    {itemsInCart.map((product) => (<li><ShowItem product={product} /></li>))}
   </ul>
   </>
 }
