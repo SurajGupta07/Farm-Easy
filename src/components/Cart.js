@@ -1,68 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import {useCart} from '../CartContext'
+import axios from "axios";
 
-const products = [
-  {
-    id: 1,
-    name: 'Baby Corn',
-    image: 'https://5.imimg.com/data5/YC/NA/SS/SELLER-70813520/frozen-baby-corn-cobs-500x500.jpg',
-    price: 'Rs. 50',
-    quantity: 0,
-    availability: 'IN STOCK'
-  },
-  {
-    id: 2,
-    name: 'Tomamto',
-    image: 'https://images.unsplash.com/photo-1606588260160-0c4707ab7db5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1316&q=80',
-    price: 'Rs. 20',
-    quantity: 0,
-    availability: 'IN STOCK'
-  },
-  {
-    id: 3,
-    name: 'Carrot',
-    image: 'https://images.unsplash.com/photo-1590868309235-ea34bed7bd7f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80',
-    price: 'Rs. 40',
-    quantity: 0,
-    availability: 'OUT OF STOCK'
-  },
-  {
-    id: 4,
-    name: 'Potato',
-    image: 'https://images.unsplash.com/photo-1604752466673-f73b5b0daa75?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80',
-    price: 'Rs. 25',
-    quantity: 0,
-    availability: 'IN STOCK'
-  },
-  {
-    id: 5,
-    name: 'Spanich',
-    image: 'https://fillyourplate.org/blog/wp-content/uploads/2020/01/Spanich-900x650.png',
-    price: 'Rs. 15',
-    quantity: 0,
-    availability: 'IN STOCK'
-  },
-  {
-    id: 6,
-    name: 'Lemon',
-    image: 'https://images.unsplash.com/photo-1593620286877-5da58b04f3a5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-    price: 'Rs. 5',
-    quantity: 0,
-    availability: 'OUT OF STOCK'
-  },
-  {
-    id: 7,
-    name: 'Onion',
-    image: "https://images.unsplash.com/photo-1508747703725-719777637510?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
-    price: 'Rs. 90',
-    quantity: 0,
-    availability: 'IN STOCK'
-  }
-]
- 
 function ShowItem({item}){
   return(
-    <div key={item.name} className="card card-body card-spacing">
+    <div className="card card-body card-spacing">
       <img src={item.image} alt="Logo" className="card-img" />
       <h2 className="card-title">{item.name}</h2>
       <p className="card-text">{item.price}</p>
@@ -108,21 +50,41 @@ export function Cart(){
   </>
 }
 
+
 export const ProductList = () => {
   const {setItemsInCart} = useCart();
-    return(
-        <div>
-          {products.map((item) => (
-          <div key={item.id} className="card card-body card-spacing">
-            <img src={item.image} alt="Logo" className="card-img" />
-            <h2 className="card-title">{item.name}</h2>
-            <p className="card-text">{item.price}</p>
-            <p className="card-text">{item.availability}</p>
-            <button className="default-button" onClick={function(e){
-              setItemsInCart((items) => [...items, item ])
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    axios 
+    .get("https://express-practice.surajgupta07.repl.co/products")
+    .then((response) => {
+      setProducts(response.data.products)
+      console.log(response.data.products)
+    })
+  })
+
+  function getProductList(){
+    return products.map(
+      ({id, name, price, image, availability}) => (
+        <div key = { id } className="card card-body card-spacing">
+          <img src={image} alt="Logo" className="card-img" />
+          <h2 className="card-title">{name}</h2>
+          <p className="card-text">{price}</p>
+          <p className="card-text">{availability}</p>
+          <button className="default-button" onClick={function(e){
+              setItemsInCart((product) => [...product, product ])
             }}>Add to Cart</button>
-          </div>
-          ))}
         </div>
+      )
     );
+  }
+
+  return(
+    <div>
+      <h1>Products</h1>
+      {products ? getProductList(products) : <div>Loading Products...</div>}
+    </div>
+  )
+
 }
