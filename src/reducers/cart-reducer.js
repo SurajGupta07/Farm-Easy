@@ -16,6 +16,9 @@ export const cartReducer = (state, {type, product}) => {
             ...state,
             cartItems: cartItems.concat(product)
             };
+
+        default: 
+            break;
         // case REMOVE_FROM_CART:
         //     return{
         //         ...state,
@@ -37,4 +40,4 @@ export const cartReducer = (state, {type, product}) => {
         //     };
     }
             
-}
+};

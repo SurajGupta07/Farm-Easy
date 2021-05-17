@@ -7,7 +7,7 @@ export function CartHeader() {
 
 
 function ShowItem(){
-  const { itemsInCart, setItemsInCart, cartItems } = useCart();
+  const { itemsInCart } = useCart();
   return itemsInCart.map(
     ({name, price, image}) => (
       <div className="card card-body card-spacing">

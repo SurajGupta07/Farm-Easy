@@ -7,7 +7,6 @@ import Navbar from "./components/Header/Navbar"
 import Login from "./components/Authentication/Login"
 import Signup from "./components/Authentication/Signup"
 import ForgotPassword from "../src/components/ForgotPassword"
-import { useState } from 'react';
 import Footer from "../src/components/Footer"
 import { useAuth } from "../src/contexts/AuthContext";
 
