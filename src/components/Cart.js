@@ -6,14 +6,20 @@ export function CartHeader() {
 }
 
 
-function ShowItem({product}){
-  return(
-    <div className="card card-body card-spacing">
-      <img src={product.image} alt="Logo" className="card-img" />
-      <h2 className="card-title">{product.name}</h2>
-      <p className="card-text">{product.price}</p>
-      <p className="card-text">{product.availability}</p>
-    </div>
+function ShowItem(){
+  const { itemsInCart, setItemsInCart, cartItems } = useCart();
+  return itemsInCart.map(
+    ({name, price, image}) => (
+      <div className="card card-body card-spacing">
+        <img src={image} alt="Logo" className="card-img" />
+        <h2 className="card-title">{name}</h2>
+        <p className="card-text">{price}</p>
+        <button>+</button>
+        Quantity
+        <button>-</button>
+        <button className="default-button">Remove Item</button>
+      </div>
+    )
   );
 }
 
@@ -22,7 +28,7 @@ export function Cart(){
   return <>
   <h1 className="main-header">Cart</h1>
   <ul>
-    {itemsInCart.map((product) => (<li><ShowItem product={product} /></li>))}
+    {itemsInCart ? ShowItem(itemsInCart) : <div>Loading Cart Items...</div>}
   </ul>
   </>
 }

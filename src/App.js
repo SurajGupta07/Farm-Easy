@@ -9,13 +9,15 @@ import Signup from "./components/Authentication/Signup"
 import ForgotPassword from "../src/components/ForgotPassword"
 import { useState } from 'react';
 import Footer from "../src/components/Footer"
+import { useAuth } from "../src/contexts/AuthContext";
+
 
 function PrivateRoute({ login, ...props }){
     return login ? <Route {...props} /> : <Navigate replace to="/login" /> 
 }
 
 function App() {
-    const [login, setLogin] = useState(false)
+    let { login, setLogin } = useAuth();
     return (
         <div className="App">
             <div className="app-body">

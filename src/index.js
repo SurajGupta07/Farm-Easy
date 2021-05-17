@@ -7,15 +7,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CartProvider } from '../src/contexts/CartContext'
 import { ProductProvider } from "../src/contexts/ProductContext"
+import { AuthProvider } from "../src/contexts/AuthContext" 
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    <AuthProvider>
     <ProductProvider>
     <CartProvider>
       <App />
     </CartProvider>
     </ProductProvider>
+    </AuthProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

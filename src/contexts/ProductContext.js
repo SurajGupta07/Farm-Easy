@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import {createContext} from 'react';
+import { MAIN_URL } from "../dbconnect/dbconnect"
 import axios from "axios";
 export const ProductContext = createContext();
 
@@ -8,7 +9,7 @@ export function ProductProvider({children}){
 
     useEffect(() => {
       axios 
-      .get("https://express-practice.surajgupta07.repl.co/products")
+      .get(`${MAIN_URL}/products`)
       .then((response) => {
         setProducts(response.data.products)
       })
