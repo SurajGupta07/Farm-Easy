@@ -1,9 +1,5 @@
 @import "https://eloquentui.netlify.app/styles/app.css";
 
-.App {
-  font-family: sans-serif;
-}
-
 .headerTitle{
   display: inline;
 }
@@ -12,7 +8,6 @@
   text-align: center;
   padding-top: 8rem;
   margin-bottom: 1rem;
-  /* opacity: 0; */
 }
 
 .main-header{
@@ -63,4 +58,80 @@
   position: fixed;
   width: 100%;
   z-index: 1;
+}
+
+.footer{
+  padding-top: 2rem; 
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 1rem;
+  background-color: #A78BFA;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.input-element{
+  margin: 1rem !important;
+  width: 50% !important;
+  margin-left: 25% !important;
+}
+
+.login-button{
+  margin-left: 45% !important;
+}
+
+.links{
+  margin: 1rem;
+  justify-content: center !important;
+  text-align: center !important; 
+}
+
+.login-component{
+  height: 25rem;
+  padding-top: 3rem;
+  margin-right: 40rem;
+  margin-left: 40rem;
+  border-radius: 1rem;
+  background-color: #F3F4F6;
+}
+
+.signup-component{
+  height: 35rem;
+  padding-top: 3rem;
+  margin-right: 40rem;
+  margin-left: 40rem;
+  border-radius: 1rem;
+  background-color: #F3F4F6;
+}
+
+/* Cart Card Buttons */
+.cssCircle {
+  border-radius: 999px;  
+  width: 2.5rem;
+  height: 2.5rem;  
+  background: #A78BFA;
+  border: 1px solid #A78BFA;
+  color: white;
+  text-align: center;  
+}
+
+.cssCircle:hover {
+  background: #6D28D9;
+  cursor: pointer;
+}
+
+.minusSign {
+  line-height: 0.9em;
+  margin-bottom: 1rem;
+}
+
+.plusSign {
+  line-height: 1.1em;
+}
+
+.minusSign:hover,
+.plusSign:hover {
+  color: white;
 }

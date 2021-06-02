@@ -1,7 +1,7 @@
 import axios from "axios";
 import { MAIN_URL } from "../dbconnect/dbconnect"
 import { useAuth } from "../contexts/AuthContext"
-import { ADD_ITEM_TO_CART } from "../reducers/cart-reducer"
+import { ADD_ITEM_TO_CART, REMOVE_FROM_CART } from "../reducers/cart-reducer"
 import { useCart } from "../contexts/CartContext"
 
 export const useCartAction = () => {
@@ -33,8 +33,26 @@ export const useCartAction = () => {
         }
     }
 
+    const removeFromCart = async (_id) => {
+      if (login) {
+        const res = await axios.delete(
+          `${MAIN_URL}/cart/item/delete/${_id}`
+        );
+
+        if(res.data.success){
+          dataDispatch({
+            type: REMOVE_FROM_CART,
+            payload: {
+              product: _id,
+            },
+          })
+          return;
+        }
+      }
+    }
       return {
             addToCartOnClick,
-            isAlreadyInCart
+            isAlreadyInCart,
+            removeFromCart
         };
 };

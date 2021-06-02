@@ -7,7 +7,7 @@ export const ProductList = () => {
     const { addToCartOnClick, isAlreadyInCart } = useCartAction();
     function getProductList({ _id }) {
         return products.map((product) => (
-            <div className="card card-body card-spacing">
+            <div key={product._id} className="card card-body card-spacing">
                 <img src={product.image} alt="Logo" className="card-img"/>
                 <h2 className="card-title">{product.name}</h2>
                 <p className="card-text">{product.price}</p>

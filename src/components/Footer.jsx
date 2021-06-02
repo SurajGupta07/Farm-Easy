@@ -3,7 +3,7 @@ import FooterLogo from "../src_images/india.png"
 
 const Footer = () => {
     return (
-        <div style={{paddingTop: "2rem", fontWeight: 600, textAlign: "center", paddingBottom: "1rem", backgroundColor: "#A78BFA"}}>Proudly made in{" "}
+        <div className="footer">Proudly made in{" "}
             <img src={FooterLogo} alt="footer-icon" style={{height:"20px", with:"20px", position: "relative", top: "5px"}} />
             {" "}by Suraj Gupta {" "}
                 <span>currently V1.0</span> 
