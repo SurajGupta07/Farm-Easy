@@ -11,17 +11,17 @@ function ShowItem() {
     const {itemsInCart} = useCart();
     const {removeFromCart} = useCartAction();
     console.log(itemsInCart)
-    return itemsInCart.map(({name, price, image}) => (
+    return itemsInCart.map(({name, price, image, quantity}) => (
         <div className="card card-body card-spacing">
             <img src={image} alt="Logo" className="card-img"/>
             <h2 className="card-title">{name}</h2>
-            <p className="card-text">{price}</p>
+            <p className="card-text">Rs.{" "}{price}</p>
             <button className="cssCircle plusSign">+</button>{" "}
-            Quantity{" "}
+            {quantity}{" "}
             <button className="cssCircle minusSign">-</button>
             <button
                 className="default-button"
-                onClick={() => removeFromCart({name, price, image})}>Remove Item</button>
+                onClick={() => removeFromCart({name, price, image, quantity})}>Remove Item</button>
         </div>
     ));
 }

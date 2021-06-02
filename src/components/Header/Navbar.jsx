@@ -10,8 +10,8 @@ export default function Navbar(){
     return(
         <div className="nav-container mainNavbar">
 			<nav className="navigation container backgroundColor">
-				<h1 className="nav-brand" style={{fontSize:"1.5rem"}}>Farm Easy</h1>
-				<div className="non-bullet nav-pills">
+			<Link to="/" style={{ textDecoration: 'none', color: 'black' }}><h1 className="nav-brand" style={{fontSize:"1.5rem"}}>Farm Easy</h1></Link>
+				<div className="non-bul1let nav-pills">
 					<Link to="/"><img src={homeLogo} alt='Logo' className="headerLogo buttonLogo"/></Link> {' '}
 					<Link to="cart"><img src={cartLogo} alt='Logo' className="headerLogo buttonLogo"/></Link> {' '}
     				<Link to="checkout"><img src={wishlistLogo} alt='Logo' className="headerLogo buttonLogo"/></Link> {' '}

@@ -1,9 +1,10 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import { useAuth } from "../../contexts/AuthContext";
 
 export default function Login() {
+    let { login, setLogin } = useAuth();
     return (
         <div className="login-component">
             <div>
@@ -30,9 +31,7 @@ export default function Login() {
                 </Link>
             </div>
             <div className="login-button">
-                <Button variant="contained" color="primary" style={{backgroundColor: "#A78BFA !important"}}>
-                    Login
-                </Button>
+                <button className="default-button" onClick={() => {setLogin(login => !login)}}>{login ? "Logout" : "Login"}</button>
             </div>
             <div className="links">
                 New user?{" "}

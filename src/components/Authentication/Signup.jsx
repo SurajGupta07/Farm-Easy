@@ -47,7 +47,7 @@ export default function Signup(){
                     Forgot Password
                 </Link>
             </div>
-            <div className="login-button">
+            <div className="signup-button">
                 <Button variant="contained" color="primary">
                     Login
                 </Button>

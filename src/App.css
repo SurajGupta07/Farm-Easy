@@ -75,6 +75,10 @@
 }
 
 .login-button{
+  margin-left: 32% !important;
+}
+
+.signup-button{
   margin-left: 45% !important;
 }
 
@@ -121,15 +125,12 @@
 .minusSign {
   line-height: 0.9em;
   margin-bottom: 1rem;
+  outline: none ! important;
 }
 
 .plusSign {
   line-height: 1.1em;
-}
-
-.minusSign:hover,
-.plusSign:hover {
-  color: white;
+  outline: none ! important;
 }
 
 .notFound{
