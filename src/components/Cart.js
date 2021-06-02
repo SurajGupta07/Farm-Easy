@@ -1,6 +1,4 @@
 import React from 'react';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
 import {useCart} from '../contexts/CartContext'
 import {useCartAction} from "../hooks/useCartAction"
 
