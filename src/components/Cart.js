@@ -4,7 +4,7 @@ import {useCartAction} from "../hooks/useCartAction"
 
 export function CartHeader() {
     const {itemsInCart} = useCart();
-    return <h3 className="sub-header">Items in Cart {itemsInCart.length}</h3>;
+    return <h3 className="sub-header">Items In Cart {itemsInCart.length}</h3>;
 }
 
 function ShowItem() {

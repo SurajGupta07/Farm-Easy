@@ -15,13 +15,9 @@
   margin-bottom: 1rem;
 }
 
-.item-list{
-  margin-left: 1rem;
-}
-
 .card-spacing{
-  margin-left: 10rem;
-  margin-bottom: 2rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
   display: inline-block;
 }
 
@@ -61,7 +57,7 @@
 }
 
 .footer{
-  padding-top: 2rem; 
+  padding-top: 1.5rem; 
   font-weight: 600;
   text-align: center;
   padding-bottom: 1rem;
@@ -134,4 +130,12 @@
 .minusSign:hover,
 .plusSign:hover {
   color: white;
+}
+
+.notFound{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 4rem;
 }
