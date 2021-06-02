@@ -141,6 +141,24 @@
   margin-top: 4rem;
 }
 
+.wishlistBtn{
+  position: absolute;
+  top: 9%;
+  left: 80%;
+  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+  font-size: 1rem;
+  padding: 0.3rem;
+  background-color: #A78BFA;
+  border-radius: 1rem;
+}
+
+.wishlistBtn:hover{
+  background: #6D28D9;
+  cursor: pointer;
+}
+
 /* Responsive Design */
 
 @media only screen and (max-width: 600px) {

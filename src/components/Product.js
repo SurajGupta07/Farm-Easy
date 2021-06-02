@@ -8,6 +8,7 @@ export const ProductList = () => {
     function getProductList({_id}) {
         return products.map((product) => (
             <div key={product._id} className="card card-body card-spacing">
+                <button className="wishlistBtn"><i className="fa fa-heart" aria-hidden="true"></i></button> 
                 <img src={product.image} alt="Logo" className="card-img" style={{marginBottom: '1rem'}}/>
                 <h2 className="card-title">{product.name}</h2>
                 <p className="card-text">Rs.{" "}{product.price}</p>

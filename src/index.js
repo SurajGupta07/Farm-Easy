@@ -1,4 +1,5 @@
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css';
 import {
   BrowserRouter as Router} from 'react-router-dom';
 import ReactDOM from 'react-dom';
