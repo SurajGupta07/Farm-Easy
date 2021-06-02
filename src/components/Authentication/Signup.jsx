@@ -3,8 +3,8 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 
-export default function Signup(){
-    return(
+export default function Signup() {
+    return (
         <div className="signup-component">
             <div>
                 <TextField
@@ -48,9 +48,7 @@ export default function Signup(){
                 </Link>
             </div>
             <div className="signup-button">
-                <Button variant="contained" color="primary">
-                    Login
-                </Button>
+                <button className="default-button">Signup</button>
             </div>
             <div className="links">
                 Have an account?{" "}

@@ -1,63 +1,63 @@
 @import "https://eloquentui.netlify.app/styles/app.css";
 
-.headerTitle{
+.headerTitle {
   display: inline;
 }
 
-.sub-header{
+.sub-header {
   text-align: center;
   padding-top: 8rem;
   margin-bottom: 1rem;
 }
 
-.main-header{
+.main-header {
   text-align: center;
   margin-bottom: 1rem;
 }
 
-.card-spacing{
+.card-spacing {
   margin-left: 5rem;
   margin-bottom: 5rem;
   display: inline-block;
 }
 
-.add-spacing{
+.add-spacing {
   margin-left: 1rem;
 }
 
-.headerLogo{
+.headerLogo {
   height: 1.5rem;
   width: 1.5rem;
   padding: 1rem;
 }
 
-.buttonLogo{
+.buttonLogo {
   background: transparent;
-  border-color: transparent; 
+  border-color: transparent;
   outline: none;
   cursor: pointer;
   margin-left: 1rem;
   display: inline;
 }
 
-.buttonLogo:hover{
+.buttonLogo:hover {
   background-color: #DDD6FE;
   border-radius: 1rem;
 }
 
-.backgroundColor{
+.backgroundColor {
   background-color: #A78BFA;
 }
 
-.mainNavbar{
+.mainNavbar {
   margin-top: 0px !important;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
 
-.footer{
-  padding-top: 1.5rem; 
+.footer {
+  padding-top: 1.5rem;
   font-weight: 600;
   text-align: center;
   padding-bottom: 1rem;
@@ -68,27 +68,27 @@
   width: 100%;
 }
 
-.input-element{
+.input-element {
   margin: 1rem !important;
   width: 50% !important;
   margin-left: 25% !important;
 }
 
-.login-button{
+.login-button {
   margin-left: 32% !important;
 }
 
-.signup-button{
-  margin-left: 45% !important;
+.signup-button {
+  margin-left: 32% !important;
 }
 
-.links{
+.links {
   margin: 1rem;
   justify-content: center !important;
-  text-align: center !important; 
+  text-align: center !important;
 }
 
-.login-component{
+.login-component {
   height: 25rem;
   padding-top: 3rem;
   margin-right: 40rem;
@@ -97,7 +97,7 @@
   background-color: #F3F4F6;
 }
 
-.signup-component{
+.signup-component {
   height: 35rem;
   padding-top: 3rem;
   margin-right: 40rem;
@@ -108,13 +108,13 @@
 
 /* Cart Card Buttons */
 .cssCircle {
-  border-radius: 999px;  
+  border-radius: 999px;
   width: 2.5rem;
-  height: 2.5rem;  
+  height: 2.5rem;
   background: #A78BFA;
-  border: 1px solid #A78BFA;
+  border: 1px solid #aba8b4;
   color: white;
-  text-align: center;  
+  text-align: center;
 }
 
 .cssCircle:hover {
@@ -133,10 +133,66 @@
   outline: none ! important;
 }
 
-.notFound{
+.notFound {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   margin-top: 4rem;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 600px) {
+
+  /* Product Listing */
+  .card-spacing {
+    margin: auto !important;
+    margin-left: 30px !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Footer */
+  .footer {
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    font-weight: 500;
+    font-size: medium;
+  }
+
+  /* Login Component */
+  .login-component {
+    height: 25rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    background-color: #F3F4F6;
+  }
+
+  .input-element {
+    width: 80% !important;
+    margin-left: 2.5rem !important;
+  }
+
+  .login-button {
+    margin-left: 4.5rem !important;
+  }
+
+  /* Signup Component */
+
+  .signup-component {
+    height: 31rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    border-radius: 1rem;
+    background-color: #F3F4F6;
+  }
+
+  .signup-button {
+    margin-left: 4.5rem !important;
+  }
 }
