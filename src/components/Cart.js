@@ -1,18 +1,18 @@
 import React from 'react';
 import {useCart} from '../contexts/CartContext'
 import {useCartAction} from "../hooks/useCartAction"
+import {useCartItems} from "../hooks/useCartItems"
 
 export function CartHeader() {
-    const {itemsInCart} = useCart();
+    const {itemsInCart} = useCartItems();
     return <h3 className="sub-header">Items In Cart {itemsInCart.length}</h3>;
 }
 
 function ShowItem() {
-    const {itemsInCart} = useCart();
+    const { itemsInCart } = useCartItems()
     const {removeFromCart} = useCartAction();
-    console.log(itemsInCart)
-    return itemsInCart.map(({name, price, image, quantity}) => (
-        <div className="card card-body card-spacing">
+    return itemsInCart.map(({ name, price, image, quantity, _id }) => (
+        <div key={_id} className="card card-body card-spacing">
             <img src={image} alt="Logo" className="card-img"/>
             <h2 className="card-title">{name}</h2>
             <p className="card-text">Rs.{" "}{price}</p>
@@ -21,7 +21,7 @@ function ShowItem() {
             <button className="cssCircle minusSign">-</button>
             <button
                 className="default-button"
-                onClick={() => removeFromCart({name, price, image, quantity})}>Remove Item</button>
+                onClick={() => removeFromCart({ _id })}>Remove Item</button>
         </div>
     ));
 }

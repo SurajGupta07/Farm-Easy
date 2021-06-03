@@ -13,7 +13,7 @@ export function ProductProvider({children}){
       .then((response) => {
         setProducts(response.data.products)
       })
-    })
+    }, [])
     return(
         <>
         <ProductContext.Provider value={{ products, setProducts }}>

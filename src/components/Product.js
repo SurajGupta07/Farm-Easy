@@ -4,11 +4,11 @@ import {useCartAction} from "../hooks/useCartAction.js"
 export const ProductList = () => {
     const {products} = useProduct();
     const navigate = useNavigate();
-    const {addToCartOnClick, isAlreadyInCart} = useCartAction();
+    const {addToCartOnClick, isAlreadyInCart, addToWishlist} = useCartAction();
     function getProductList({_id}) {
         return products.map((product) => (
             <div key={product._id} className="card card-body card-spacing">
-                <button className="wishlistBtn"><i className="fa fa-heart" aria-hidden="true"></i></button> 
+                <button className="wishlistBtn" onClick={() => addToWishlist({product})}><i className="fa fa-heart" aria-hidden="true"></i></button> 
                 <img src={product.image} alt="Logo" className="card-img" style={{marginBottom: '1rem'}}/>
                 <h2 className="card-title">{product.name}</h2>
                 <p className="card-text">Rs.{" "}{product.price}</p>

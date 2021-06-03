@@ -6,9 +6,9 @@ import Signup from "./components/Authentication/Signup"
 import ForgotPassword from "../src/components/ForgotPassword"
 import Footer from "../src/components/Footer"
 import Notfound from "./components/NotFound/Notfound"
-import { CartHeader, Cart} from "../src/components/Cart"
+import { Cart, CartHeader } from "../src/components/Cart"
 import { ProductList } from "../src/components/Product"
-import { Checkout } from "../src/components/Checkout"
+import { Wishlist } from "./components/Wishlist"
 import { PrivateRoute } from "./controllers/PrivateRoute"
 
 function App() {
@@ -16,14 +16,14 @@ function App() {
         <div className="App">
             <div className="app-body">
                 <Navbar/>
-                <CartHeader/>
+                <CartHeader />
                 <Routes>
                     <Route path="/" element={< ProductList />}/>
                     <Route path="login" element={< Login />}/> 
                     <Route path="signup" element={< Signup />}/>
                     <Route path="forgot-password" element={< ForgotPassword />}/>
-                    <PrivateRoute path="cart" element={< Cart />}/>
-                    <PrivateRoute path="/checkout" element={< Checkout />}/>
+                    <Route path="cart" element={< Cart />}/>
+                    <PrivateRoute path="/wishlist" element={< Wishlist />}/>
                     <Route path="*" element={<Notfound />} />
                 </Routes>
                 <Footer />
