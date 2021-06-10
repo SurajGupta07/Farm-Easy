@@ -6,9 +6,10 @@ export const CartContext = createContext();
 export function CartProvider({children}){
     let [ {cartItems, wishlist}, dispatch] = useReducer(cartReducer, initialState);
     let [itemsInCart, setItemsInCart] = useState([]);
+    let [wishlistItems, setWishlistItems] = useState([]);
   
     return(   
-      <CartContext.Provider value={{ itemsInCart, setItemsInCart, cartItems, wishlist,  dataDispatch: dispatch }}>
+      <CartContext.Provider value={{ itemsInCart, setItemsInCart, cartItems, wishlist, wishlistItems, setWishlistItems, dataDispatch: dispatch }}>
           {children}
       </CartContext.Provider>
     )

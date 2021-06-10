@@ -214,3 +214,10 @@
     margin-left: 4.5rem !important;
   }
 }
+
+.loaderGif{
+  margin: auto !important;
+  height: 10rem;
+  width: 10rem;
+  margin-top: 15rem !important;
+}

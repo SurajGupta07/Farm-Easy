@@ -33,6 +33,9 @@ export default function Login() {
             <div className="login-button">
                 <button className="default-button" onClick={() => {setLogin(login => !login)}}>{login ? "Logout" : "Login"}</button>
             </div>
+            <div style={{textAlign:'center', marginTop:"1rem"}}>
+                <p>Password: Click on <strong>Login</strong> & navigate</p>
+            </div>
             <div className="links">
                 New user?{" "}
                 <Link href="/signup">

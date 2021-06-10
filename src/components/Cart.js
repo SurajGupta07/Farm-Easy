@@ -1,7 +1,7 @@
-import React from 'react';
 import {useCart} from '../contexts/CartContext'
 import {useCartAction} from "../hooks/useCartAction"
 import {useCartItems} from "../hooks/useCartItems"
+import Loader from "../src_images/loader.gif"
 
 export function CartHeader() {
     const {itemsInCart} = useCartItems();
@@ -33,7 +33,7 @@ export function Cart() {
         <ul>
             {itemsInCart
                 ? ShowItem(itemsInCart)
-                : <div>Loading Cart Items...</div>}
+                : <div className="loaderGif"><img style={{height:"5rem", width: "5rem"}} src={Loader} /></div>}
         </ul>
     </div>
 }

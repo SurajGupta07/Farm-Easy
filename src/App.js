@@ -22,7 +22,7 @@ function App() {
                     <Route path="login" element={< Login />}/> 
                     <Route path="signup" element={< Signup />}/>
                     <Route path="forgot-password" element={< ForgotPassword />}/>
-                    <Route path="cart" element={< Cart />}/>
+                    <PrivateRoute path="cart" element={< Cart />}/>
                     <PrivateRoute path="/wishlist" element={< Wishlist />}/>
                     <Route path="*" element={<Notfound />} />
                 </Routes>

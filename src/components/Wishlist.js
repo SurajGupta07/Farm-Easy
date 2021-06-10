@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import axios from "axios";
 import { WISHLIST_API } from "../dbconnect/dbconnect"
+import Loader from "../src_images/loader.gif"
 
 export function Wishlist(){
   
@@ -30,7 +31,7 @@ export function Wishlist(){
       <ul>
           {wishlistItems
               ? ShowWishListItem(wishlistItems)
-              : <div>Loading wishlist Items...</div>}
+              : <div className="loaderGif"><img style={{height:"5rem", width: "5rem"}} src={Loader} /></div>}
       </ul>
   </div>
   }

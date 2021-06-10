@@ -1,6 +1,7 @@
 import {useProduct} from "../contexts/ProductContext"
 import {useNavigate} from "react-router";
 import {useCartAction} from "../hooks/useCartAction.js"
+import Loader from "../src_images/loader.gif"
 export const ProductList = () => {
     const {products} = useProduct();
     const navigate = useNavigate();
@@ -32,7 +33,7 @@ export const ProductList = () => {
         <div>
             {products
                 ? getProductList(products)
-                : <div>Loading Products...</div>}
+                : <div className="loaderGif"><img style={{height:"5rem", width: "5rem"}} src={Loader} /></div>}
         </div>
     )
 

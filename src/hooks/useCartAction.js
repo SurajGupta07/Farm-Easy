@@ -8,7 +8,7 @@ export const useCartAction = () => {
     let { login } = useAuth();
     const { dataDispatch } = useCart();
     const addToCartOnClick = async ({product}) => {
-        // if (login) {
+        if (login) {
           const res = await axios.post(`${MAIN_URL}/cart`, {
             product: {
               ...product,
@@ -24,7 +24,7 @@ export const useCartAction = () => {
             });
           }
           return;
-        // }
+        }
       };
 
     const isAlreadyInCart = (_id) => {
@@ -55,7 +55,7 @@ export const useCartAction = () => {
 
 
     const removeFromCart = async ({_id, product}) => {
-      // if (login) {
+      if (login) {
         try{
           const { status } = await axios.delete(
             `${CART_URL}/${_id}`,
@@ -72,7 +72,7 @@ export const useCartAction = () => {
          catch (err) {
           console.error(err)
         }
-      // }
+      }
     }
       return {
         addToCartOnClick,
