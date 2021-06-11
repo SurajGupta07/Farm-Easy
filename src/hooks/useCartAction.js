@@ -60,7 +60,7 @@ export const useCartAction = () => {
           const { status } = await axios.delete(
             `${CART_URL}/${_id}`,
           );
-          if(status == 200){
+          if(status === 200){
             dataDispatch({
               type: REMOVE_FROM_CART,
               payload: {

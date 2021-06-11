@@ -33,7 +33,7 @@ export function Cart() {
         <ul>
             {itemsInCart
                 ? ShowItem(itemsInCart)
-                : <div className="loaderGif"><img style={{height:"5rem", width: "5rem"}} src={Loader} /></div>}
+                : <div className="loaderGif"><img style={{height:"5rem", width: "5rem"}} alt="Loader" src={Loader} /></div>}
         </ul>
     </div>
 }

@@ -33,7 +33,7 @@ export const ProductList = () => {
         <div>
             {products
                 ? getProductList(products)
-                : <div className="loaderGif"><img style={{height:"5rem", width: "5rem"}} src={Loader} /></div>}
+                : <div className="loaderGif"><img style={{height:"5rem", width: "5rem"}} alt="Loader" src={Loader} /></div>}
         </div>
     )
 
