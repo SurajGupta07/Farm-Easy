@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { MAIN_URL, CART_URL, WISHLIST_API } from "../dbconnect/dbconnect"
 import { useAuth } from "../contexts/AuthContext"
 import { ADD_ITEM_TO_CART, REMOVE_FROM_CART, ADD_TO_WISHLIST } from "../reducers/cart-reducer"
@@ -6,6 +7,7 @@ import { useCart } from "../contexts/CartContext"
 
 export const useCartAction = () => {
     let { login } = useAuth();
+    let navigate = useNavigate();
     const { dataDispatch } = useCart();
     const addToCartOnClick = async ({product}) => {
         if (login) {
@@ -24,7 +26,8 @@ export const useCartAction = () => {
             });
           }
           return;
-        }
+        } 
+        navigate("/login")
       };
 
     const isAlreadyInCart = (_id) => {
@@ -51,6 +54,7 @@ export const useCartAction = () => {
         }
         return;
       }
+      navigate("/login")
     };
 
 
@@ -73,6 +77,7 @@ export const useCartAction = () => {
           console.error(err)
         }
       }
+      navigate("/login")
     }
       return {
         addToCartOnClick,
