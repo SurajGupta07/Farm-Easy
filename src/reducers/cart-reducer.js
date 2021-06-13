@@ -15,7 +15,7 @@ export const cartReducer = (state, {type, payload, _id, product}) => {
         case ADD_ITEM_TO_CART:
             return {
                 ...state,
-                cartItems: state.cartItems.concat(payload.product)
+                cartItems: cartItems.concat(payload.product)
             };
         case REMOVE_FROM_CART:
             return {
@@ -25,7 +25,7 @@ export const cartReducer = (state, {type, payload, _id, product}) => {
         case ADD_TO_WISHLIST: 
             return{
                 ...state,
-                wishlist: wishlist.concat(product)
+                wishlist: wishlist.concat(payload.product)
             };
         default:
             return state;

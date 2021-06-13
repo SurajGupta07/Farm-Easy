@@ -38,13 +38,13 @@ export const useCartAction = () => {
 
     const addToWishlist = async ({product}) => {
       if (login) {
-        const res = await axios.post(`${WISHLIST_API}`, {
+        const { status } = await axios.post(`${WISHLIST_API}`, {
           product: {
             ...product,
           },
         });
   
-        if (res.data.success) {
+        if (status === 200) {
           dataDispatch({
             type: ADD_TO_WISHLIST,
             payload: {
@@ -77,7 +77,6 @@ export const useCartAction = () => {
           console.error(err)
         }
       }
-      navigate("/login")
     }
       return {
         addToCartOnClick,

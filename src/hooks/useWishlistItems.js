@@ -9,8 +9,7 @@ export const useWishlistItems = () => {
         (async () => {
           const response = await axios.get(`${WISHLIST_API}`)
           if(response.status === 200){
-            console.log({response})
-            setWishlistItems(response.data.cart)
+            setWishlistItems(response.data.wishlist)
           }
         })()
       }, [])
