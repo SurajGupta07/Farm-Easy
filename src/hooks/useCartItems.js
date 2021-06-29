@@ -12,7 +12,7 @@ export const useCartItems = () => {
             setItemsInCart(response.data.cart)
           }
         })()
-      }, []) // eslint-disable-line react-hooks/exhaustive-deps
+      }) // eslint-disable-line react-hooks/exhaustive-deps
 
       return {
         itemsInCart

@@ -4,23 +4,24 @@ import axios from "axios";
 import { WISHLIST_API } from "../dbconnect/dbconnect"
 import Loader from "../src_images/loader.gif"
 import { useCart } from '../contexts/CartContext';
-
+import { useCartAction } from '../hooks/useCartAction';
 
 function ShowWishListItem() { 
   let {wishlistItems, setWishlistItems} = useCart(); 
+  let { removeFromWishlist } = useCartAction();
   useEffect(() => { 
     axios 
     .get(`${WISHLIST_API}`)
     .then((response) => {
       setWishlistItems(response.data.wishlist)
     })
-  }, [])
+  })
   return wishlistItems.map(({_id, name, price, image }) => (
       <div key={_id} className="card card-body card-spacing">
           <img src={image} alt="Logo" className="card-img"/>
           <h2 className="card-title">{name}</h2>
           <p className="card-text">Rs.{" "}{price}</p>
-          <button className="default-button">Remove from wishlist</button>
+          <button className="default-button" onClick={() => removeFromWishlist(_id)}>Remove from wishlist</button>
       </div>
     ));
 }

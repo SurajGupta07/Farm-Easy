@@ -12,7 +12,7 @@ export const useWishlistItems = () => {
             setWishlistItems(response.data.wishlist)
           }
         })()
-      }, [])
+      })
 
       return {
         wishlistItems
