@@ -1,21 +1,17 @@
 import React from 'react';
+import {useAuth} from '../../contexts/AuthContext';
+import { useAuthActions } from '../../hooks/useAuthActions';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 
 export default function Signup() {
+    let {email, setSignupEmail, password, setSignupPassword} = useAuth();
+    let {signupUser} = useAuthActions();
     return (
         <div className="signup-component">
             <div>
-                <TextField
-                    id="outlined-textarea"
-                    label="Enter your Name"
-                    placeholder="Enter your Name"
-                    multiline
-                    variant="outlined"
-                    className="input-element"/>
-            </div>
-            <div>
-                <TextField
+                <TextField onChange={(e) => setSignupEmail(e.target.value)}
+                    value={email}
                     id="outlined-textarea"
                     label="Enter your Email"
                     placeholder="Enter your Email"
@@ -24,19 +20,11 @@ export default function Signup() {
                     className="input-element"/>
             </div>
             <div>
-                <TextField
+                <TextField onChange={(e) => setSignupPassword(e.target.value)}
+                    value = {password}
                     id="outlined-textarea"
                     label="Enter new password"
                     placeholder="Enter new password"
-                    multiline
-                    variant="outlined"
-                    className="input-element"/>
-            </div>
-            <div>
-                <TextField
-                    id="outlined-textarea"
-                    label="Re-Enter new password"
-                    placeholder="Re-Enter new password"
                     multiline
                     variant="outlined"
                     className="input-element"/>
@@ -47,7 +35,7 @@ export default function Signup() {
                 </Link>
             </div>
             <div className="signup-button">
-                <button className="default-button">Signup</button>
+                <button onClick={() => signupUser(email, password)} className="default-button">Signup</button>
             </div>
             <div className="links">
                 Have an account?{" "}
