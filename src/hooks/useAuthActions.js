@@ -10,25 +10,34 @@ export const useAuthActions = () => {
         try {
             const res = await axios.post(`${MAIN_URL}/signup/new`, {email, password})
             var token = res.data.token;
-            console.log(token)
-            console.log(res.data)
-            if (res.status === 201) {
-                loginUser(email, password)
+            if (res.status === 200) {
+                authenticateUser(email, password)
                 setToken(token)
             }
         } catch (err) {
             console.log(err)
         }
 
-    function loginUser() {
+    function authenticateUser() {
         setLogin(true)
         localStorage?.setItem('login', JSON.stringify({ login: true, token }));
-        navigate("/cart")
+        navigate("/");
     }
     }
 
-    const loginUser = () => {
-        console.log('working')
+    const loginUser = async (email, password) => {
+        try {
+            const res = await axios.post(`${MAIN_URL}/login`, {email, password})
+            const token = res.data.token;
+            if(res.status === 200) {
+              setLogin(true)
+              localStorage?.setItem('login', JSON.stringify({ login: true, token }));
+              navigate("/");
+            }
+        }
+        catch(err) {
+            console.log(err)
+        }
     } 
 
     return {signupUser, loginUser}

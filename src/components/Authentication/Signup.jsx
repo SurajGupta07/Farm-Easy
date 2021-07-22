@@ -5,12 +5,12 @@ import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 
 export default function Signup() {
-    let {email, setSignupEmail, password, setSignupPassword} = useAuth();
+    let {email, setEmail, password, setPassword} = useAuth();
     let {signupUser} = useAuthActions();
     return (
         <div className="signup-component">
             <div>
-                <TextField onChange={(e) => setSignupEmail(e.target.value)}
+                <TextField onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     id="outlined-textarea"
                     label="Enter your Email"
@@ -20,7 +20,7 @@ export default function Signup() {
                     className="input-element"/>
             </div>
             <div>
-                <TextField onChange={(e) => setSignupPassword(e.target.value)}
+                <TextField onChange={(e) => setPassword(e.target.value)}
                     value = {password}
                     id="outlined-textarea"
                     label="Enter new password"
