@@ -76,10 +76,12 @@
 
 .login-button {
   margin-left: 32% !important;
+  cursor: pointer !important;
 }
 
 .signup-button {
   margin-left: 32% !important;
+  cursor: pointer !important;
 }
 
 .links {
@@ -196,6 +198,7 @@
 
   .login-button {
     margin-left: 4.5rem !important;
+    cursor: pointer !important;
   }
 
   /* Signup Component */
@@ -212,6 +215,7 @@
 
   .signup-button {
     margin-left: 4.5rem !important;
+    cursor: pointer !important;
   }
 }
 
