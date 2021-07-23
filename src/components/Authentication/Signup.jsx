@@ -11,7 +11,6 @@ export default function Signup() {
         <div className="signup-component">
             <div>
                 <TextField onChange={(e) => setEmail(e.target.value)}
-                    value={email}
                     id="outlined-textarea"
                     label="Enter your Email"
                     placeholder="Enter your Email"
@@ -22,7 +21,6 @@ export default function Signup() {
             </div>
             <div>
                 <TextField onChange={(e) => setPassword(e.target.value)}
-                    value = {password}
                     id="outlined-textarea"
                     label="Enter new password"
                     placeholder="Enter new password"

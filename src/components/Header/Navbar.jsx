@@ -12,10 +12,11 @@ export default function Navbar(){
 			<nav className="navigation container backgroundColor">
 			<Link to="/" style={{ textDecoration: 'none', color: 'black' }}><h1 className="nav-brand" style={{fontSize:"1.5rem"}}>Farm Easy</h1></Link>
 				<div className="non-bul1let nav-pills">
+					<Link to="/login" className="login__user"><span className="headerLogo buttonLogo">Login</span></Link>
+					<span onClick={logoutUser} className="headerLogo buttonLogo logout__user">Logout</span>{' '}
 					<Link to="/"><img src={homeLogo} alt='Logo' className="headerLogo buttonLogo"/></Link> {' '}
 					<Link to="/cart"><img src={cartLogo} alt='Logo' className="headerLogo buttonLogo"/></Link> {' '}
     				<Link to="/wishlist"><img src={wishlistLogo} alt='Logo' className="headerLogo buttonLogo"/></Link> {' '}		
-					<span onClick={logoutUser}>Logout</span>	
         		</div>
 			</nav>
 		</div>

@@ -11,7 +11,6 @@ export default function Login() {
         <div className="login-component">
             <div>
                 <TextField onChange={(e) => setEmail(e.target.value)}
-                    value = {email}
                     id="outlined-textarea"
                     label="Enter your Email or Username"
                     placeholder="Enter your Email or Username"
@@ -22,7 +21,6 @@ export default function Login() {
             </div>
             <div>
                 <TextField onChange={(e) => setPassword(e.target.value)}
-                    value = {password}
                     id="outlined-textarea"
                     label="Password"
                     placeholder="Password"
