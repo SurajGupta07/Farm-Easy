@@ -41,5 +41,11 @@ export const useAuthActions = () => {
         }
     } 
 
-    return {signupUser, loginUser}
+    const logoutUser = () => {
+        setToken(null)
+        localStorage?.removeItem('login');
+        navigate('/')
+    }
+
+    return {signupUser, loginUser, logoutUser}
 };
