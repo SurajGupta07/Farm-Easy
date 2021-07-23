@@ -84,6 +84,10 @@
   width: 100%;
 }
 
+.product__list{
+  padding-top: 10rem;
+}
+
 .input-element {
   margin: 1rem !important;
   width: 50% !important;
@@ -113,6 +117,10 @@
   margin-left: 40rem;
   border-radius: 1rem;
   background-color: #F3F4F6;
+}
+
+.auth__page{
+  padding-top: 15rem;
 }
 
 .signup-component {
@@ -258,5 +266,9 @@
 
   .logout__user{
     font-size: 15px;
+  }
+
+  .auth__page{
+    padding-top: 10rem;
   }
 }
