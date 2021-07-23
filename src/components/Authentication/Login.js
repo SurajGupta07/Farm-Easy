@@ -6,7 +6,7 @@ import { useAuthActions } from '../../hooks/useAuthActions';
 
 export default function Login() {
     let {loginUser} = useAuthActions();
-    let {email, setEmail, password, setPassword} = useAuth();
+    let {email, setEmail, password, setPassword, error} = useAuth();
     return (
         <div className="login-component">
             <div>
@@ -18,6 +18,7 @@ export default function Login() {
                     multiline
                     variant="outlined"
                     className="input-element"/>
+                <div className="error__validation">{error.email}</div>
             </div>
             <div>
                 <TextField onChange={(e) => setPassword(e.target.value)}
@@ -28,6 +29,7 @@ export default function Login() {
                     multiline
                     variant="outlined"
                     className="input-element"/>
+                <div className="error__validation">{error.password}</div>
             </div>
             <div className="links">
                 <Link href="/forgot-password">

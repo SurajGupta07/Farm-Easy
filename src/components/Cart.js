@@ -5,7 +5,7 @@ import Loader from "../src_images/loader.gif"
 
 export function CartHeader() {
     const {itemsInCart} = useCartItems();
-    return <h3 className="sub-header">Items In Cart {itemsInCart.length}</h3>;
+    return <h3 className="sub-header">Items In Cart {itemsInCart?.length}</h3>;
 }
 
 function ShowItem() {

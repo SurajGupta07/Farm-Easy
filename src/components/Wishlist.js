@@ -5,13 +5,19 @@ import { WISHLIST_API } from "../dbconnect/dbconnect"
 import Loader from "../src_images/loader.gif"
 import { useCart } from '../contexts/CartContext';
 import { useCartAction } from '../hooks/useCartAction';
+import { useAuth } from "../contexts/AuthContext";
 
 function ShowWishListItem() { 
+  let { token } = useAuth();
   let {wishlistItems, setWishlistItems} = useCart(); 
   let { removeFromWishlist } = useCartAction();
   useEffect(() => { 
     axios 
-    .get(`${WISHLIST_API}`)
+    .get(`${WISHLIST_API}`, {
+      headers: {
+        authorization: token,
+      },
+    })
     .then((response) => {
       setWishlistItems(response.data.wishlist)
     })

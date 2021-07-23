@@ -1,8 +1,10 @@
 import {useProduct} from "../contexts/ProductContext"
 import {useNavigate} from "react-router";
 import {useCartAction} from "../hooks/useCartAction.js"
+import { useAuth } from "../contexts/AuthContext";
 import Loader from "../src_images/loader.gif"
 export const ProductList = () => {
+    const { token } = useAuth();
     const {products} = useProduct();
     const navigate = useNavigate();
     const {addToCartOnClick, isAlreadyInCart, addToWishlist} = useCartAction();
@@ -21,7 +23,14 @@ export const ProductList = () => {
                         </button>
                     )
                     : (
-                        <button onClick={() => addToCartOnClick({product})} className="default-button">
+                        <button onClick={() => {
+                            if(token) {
+                                addToCartOnClick({product})
+                            }
+                            else {
+                                navigate("/login");
+                            }
+                        }} className="default-button">
                             ADD TO CART
                         </button>
                     )}

@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 
 export default function Signup() {
-    let {email, setEmail, password, setPassword} = useAuth();
+    let {email, setEmail, password, setPassword, error} = useAuth();
     let {signupUser} = useAuthActions();
     return (
         <div className="signup-component">
@@ -18,6 +18,7 @@ export default function Signup() {
                     multiline
                     variant="outlined"
                     className="input-element"/>
+                <div className="error__validation">{error.email}</div>
             </div>
             <div>
                 <TextField onChange={(e) => setPassword(e.target.value)}
@@ -28,6 +29,7 @@ export default function Signup() {
                     multiline
                     variant="outlined"
                     className="input-element"/>
+                <div className="error__validation">{error.password}</div>
             </div>
             <div className="links">
                 <Link href="/forgot-password">
