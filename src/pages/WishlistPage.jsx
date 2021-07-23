@@ -9,8 +9,6 @@ const WishlistPage = () => {
             <div className="product__list">
                 <Wishlist />
             </div>
-
-            <Footer/>
         </>
     )
 }

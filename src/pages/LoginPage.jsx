@@ -9,7 +9,9 @@ const LoginPage = () => {
             <div className="auth__page">
                 <Login />
             </div>
-            <Footer />
+            <div className="footer__position">
+                <Footer />
+            </div>
         </>
     )
 }

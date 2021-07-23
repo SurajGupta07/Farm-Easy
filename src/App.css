@@ -1,5 +1,11 @@
 @import "https://eloquentui.netlify.app/styles/app.css";
 
+.App{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .headerTitle {
   display: inline;
 }
@@ -73,6 +79,15 @@
 }
 
 .footer {
+  padding-top: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 1rem;
+  background-color: #A78BFA;
+  margin: auto 0;
+}
+
+.footer__position{
   padding-top: 1.5rem;
   font-weight: 600;
   text-align: center;

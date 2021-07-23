@@ -8,7 +8,6 @@ const CartPage = () => {
             <Navbar/>
             <CartHeader/>
             <Cart />
-            <Footer/>
         </>
     )
 }
