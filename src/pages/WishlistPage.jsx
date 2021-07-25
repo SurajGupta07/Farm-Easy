@@ -1,5 +1,4 @@
 import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer";
 import { Wishlist } from "../components/Wishlist";
 
 const WishlistPage = () => {
