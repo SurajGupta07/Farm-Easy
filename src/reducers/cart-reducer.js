@@ -35,11 +35,6 @@ export const cartReducer = (state, {type, payload, _id, product}) => {
             }
         default:
             return state;
-            // case INCREASE_QUANTITY:     return{         ...state,         cartItems:
-            // cartItems.map((item) => {             return item.id === id ? { ...item, qty:
-            // item.qty + 1 } : item;         })     }; case DECREASE_QUANTITY:     return{
-            //       ...state,         cartItems: cartItems.map((item) => { return item.id
-            // === id ? { ...item, qty: item.qty - 1} : item;         }) };
     }
 
 };

@@ -16,24 +16,21 @@ export const ProductList = () => {
                 <h2 className="card-title">{product.name}</h2>
                 <p className="card-text">Rs.{" "}{product.price}</p>
                 <p className="card-text">{product.availability}</p>
-                {isAlreadyInCart(_id)
-                    ? (
-                        <button onClick={() => navigate("/cart")} className="default-button">
-                            GO TO CART
-                        </button>
-                    )
-                    : (
-                        <button onClick={() => {
-                            if(token) {
-                                addToCartOnClick({product})
-                            }
-                            else {
-                                navigate("/login");
-                            }
-                        }} className="default-button">
-                            ADD TO CART
-                        </button>
-                    )}
+                {product.availability ==="IN STOCK" ? 
+                <button onClick={() => {
+                    if(token) {
+                        addToCartOnClick({product})
+                    }
+                    else {
+                        navigate("/login");
+                    }
+                }} className="default-button">
+                    ADD TO CART
+                </button> : 
+                <button  className="default-button disabled-btn">
+                    ADD TO CART
+                </button>
+                }
             </div>
         ));
     }

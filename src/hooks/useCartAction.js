@@ -36,12 +36,6 @@ export const useCartAction = () => {
         navigate("/login")
     };
 
-    const isAlreadyInCart = (_id) => {
-        if (login) {
-            return;
-        }
-    }
-
     const addToWishlist = async({product}) => {
         if (login) {
             const {status} = await axios.post(`${WISHLIST_API}`, {
@@ -113,5 +107,5 @@ export const useCartAction = () => {
             }
         }
     }
-    return {addToCartOnClick, isAlreadyInCart, removeFromCart, addToWishlist, removeFromWishlist};
+    return {addToCartOnClick, removeFromCart, addToWishlist, removeFromWishlist};
 };

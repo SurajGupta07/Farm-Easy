@@ -103,6 +103,11 @@
   padding-top: 10rem;
 }
 
+.disabled-btn{
+  cursor: not-allowed;
+  background-color: #DDD6FE !important;
+}
+
 .input-element {
   margin: 1rem !important;
   width: 50% !important;
