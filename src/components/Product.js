@@ -7,7 +7,7 @@ export const ProductList = () => {
     const { token } = useAuth();
     const {products} = useProduct();
     const navigate = useNavigate();
-    const {addToCartOnClick, isAlreadyInCart, addToWishlist} = useCartAction();
+    const {addToCartOnClick, addToWishlist} = useCartAction();
     function getProductList({_id}) {
         return products.map((product) => (
             <div key={product._id} className="card card-body card-spacing">
