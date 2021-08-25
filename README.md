@@ -51,3 +51,7 @@ Bootstrapped with `create-react-app`
 ```
 Open the `localhost` link in the browser.
 Happy hacking!       
+
+### Products Page:
+![products](https://user-images.githubusercontent.com/48823022/130805349-0953863c-a46c-4280-a234-315a886a0cb9.png)
+
