@@ -46,6 +46,10 @@ export default function Login() {
                     SignUp
                 </Link>
             </div>
+            <div className="links">
+                <p><strong>Email:</strong> suraj@gmail.com</p>
+                <p><strong>Password:</strong> 123456</p>
+            </div>
         </div>
     )
 }
