@@ -1,15 +1,15 @@
-import Navbar from "../components/Header/Navbar";
-import { Wishlist } from "../components/Wishlist";
+import Navbar from '../components/Header/Navbar';
+import { Wishlist } from '../components/Wishlist';
 
 const WishlistPage = () => {
-    return(
+    return (
         <>
-            <Navbar/>
+            <Navbar />
             <div className="product__list">
                 <Wishlist />
             </div>
         </>
-    )
-}
+    );
+};
 
 export default WishlistPage;

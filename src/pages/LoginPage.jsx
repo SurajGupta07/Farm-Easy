@@ -1,9 +1,9 @@
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer";
-import Login from "../components/Authentication/Login"
+import Navbar from '../components/Header/Navbar';
+import Footer from '../components/Footer';
+import Login from '../components/Authentication/Login';
 
 const LoginPage = () => {
-    return(
+    return (
         <>
             <Navbar />
             <div className="auth__page">
@@ -13,7 +13,7 @@ const LoginPage = () => {
                 <Footer />
             </div>
         </>
-    )
-}
+    );
+};
 
 export default LoginPage;

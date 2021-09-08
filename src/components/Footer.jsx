@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
     return (
@@ -7,13 +7,16 @@ const Footer = () => {
                 href="https://github.com/SurajGupta07"
                 rel="noreferrer"
                 style={{
-                color: '#4338CA',
-                textDecoration: 'none'
-            }}
-                target="_blank">Suraj Gupta</a>{" "}
+                    color: '#4338CA',
+                    textDecoration: 'none'
+                }}
+                target="_blank"
+            >
+                Suraj Gupta
+            </a>{' '}
             <span>currently V1.0</span>
         </div>
     );
-}
+};
 
 export default Footer;

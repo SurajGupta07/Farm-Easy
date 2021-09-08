@@ -1,19 +1,19 @@
-import Navbar from "../components/Header/Navbar";
-import Footer from "../components/Footer";
-import Signup from "../components/Authentication/Signup";
+import Navbar from '../components/Header/Navbar';
+import Footer from '../components/Footer';
+import Signup from '../components/Authentication/Signup';
 
 const SignupPage = () => {
-    return(
+    return (
         <>
             <Navbar />
             <div className="auth__page">
                 <Signup />
             </div>
             <div className="footer__position">
-                <Footer/>
+                <Footer />
             </div>
         </>
-    )
-}
+    );
+};
 
 export default SignupPage;

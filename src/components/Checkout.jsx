@@ -41,7 +41,7 @@ export const Checkout = ({ itemsInCart }) => {
             currency: 'INR',
             amount: totalAmount,
             name: 'Farm-Easy',
-            description: 'Refresh Your Home Inside and Out',
+            description: 'Farm Fresh, Farm Easy',
             order_id: data.id,
             handler: function (response) {
                 setPaymentId(response.razorpay_payment_id);
@@ -83,7 +83,7 @@ export const Checkout = ({ itemsInCart }) => {
             <div className="card-body card-title">
                 <h3>Total Amount = ₹{TotalPrice(itemsInCart)}</h3>
             </div>
-            <div style={{marginBottom: '1rem', marginLeft: '1rem'}}>
+            <div style={{ marginBottom: '1rem', marginLeft: '1rem' }}>
                 {totalAmount > 0 && (
                     <button className="default-button" onClick={payRazorpay}>
                         Checkout
