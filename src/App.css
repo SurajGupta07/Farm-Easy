@@ -1,6 +1,6 @@
 @import "https://eloquentui.netlify.app/styles/app.css";
 
-.App{
+.App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
 }
 
 .buttonLogo:hover {
-  background-color: #DDD6FE;
+  background-color: #ddd6fe;
   border-radius: 1rem;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .backgroundColor {
-  background-color: #A78BFA;
+  background-color: #a78bfa;
 }
 
 .mainNavbar {
@@ -83,29 +83,29 @@
   font-weight: 600;
   text-align: center;
   padding-bottom: 1rem;
-  background-color: #A78BFA;
+  background-color: #a78bfa;
   margin: auto 0;
 }
 
-.footer__position{
+.footer__position {
   padding-top: 1.5rem;
   font-weight: 600;
   text-align: center;
   padding-bottom: 1rem;
-  background-color: #A78BFA;
+  background-color: #a78bfa;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
 }
 
-.product__list{
+.product__list {
   padding-top: 10rem;
 }
 
-.disabled-btn{
+.disabled-btn {
   cursor: not-allowed;
-  background-color: #DDD6FE !important;
+  background-color: #ddd6fe !important;
 }
 
 .input-element {
@@ -136,10 +136,10 @@
   margin-right: 40rem;
   margin-left: 40rem;
   border-radius: 1rem;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
 }
 
-.auth__page{
+.auth__page {
   padding-top: 15rem;
 }
 
@@ -149,7 +149,7 @@
   margin-right: 40rem;
   margin-left: 40rem;
   border-radius: 1rem;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
 }
 
 /* Cart Card Buttons */
@@ -157,26 +157,26 @@
   border-radius: 999px;
   width: 2.5rem;
   height: 2.5rem;
-  background: #A78BFA;
+  background: #a78bfa;
   border: 1px solid #aba8b4;
   color: white;
   text-align: center;
 }
 
 .cssCircle:hover {
-  background: #6D28D9;
+  background: #6d28d9;
   cursor: pointer;
 }
 
 .minusSign {
   line-height: 0.9em;
   margin-bottom: 1rem;
-  outline: none ! important;
+  outline: none !important;
 }
 
 .plusSign {
   line-height: 1.1em;
-  outline: none ! important;
+  outline: none !important;
 }
 
 .notFound {
@@ -196,12 +196,12 @@
   outline: none !important;
   font-size: 1rem;
   padding: 0.3rem;
-  background-color: #A78BFA;
+  background-color: #a78bfa;
   border-radius: 1rem;
 }
 
 .wishlistBtn:hover {
-  background: #6D28D9;
+  background: #6d28d9;
   cursor: pointer;
 }
 
@@ -222,10 +222,59 @@
   margin-top: 15rem !important;
 }
 
+.checkout-box {
+  width: 20rem;
+  height: auto;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  margin-bottom: 5rem !important;
+  margin-left: 5rem;
+  padding-left: 1rem;
+  border: 2px solid black;
+  opacity: 90%;
+}
+
+.price-text {
+  margin-top: 1rem;
+  opacity: 70%;
+  text-align: center;
+}
+
+.btn-space{
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.orders{
+  margin-top: 200px ; 
+  /* 9278912345 21090603749 */
+}
+
+.order-box{
+  width: 40rem;
+  height: auto;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  margin: auto;
+  padding-left: 1rem;
+  border: 2px solid black;
+  opacity: 90%;
+}
+
+.order-img{
+  height: 500px;
+  width: 500px;
+  padding-left: 2rem;
+}
+
+.order-text{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
 /* Responsive Design */
 
 @media only screen and (max-width: 600px) {
-
   /* Product Listing */
   .card-spacing {
     margin: auto !important;
@@ -249,7 +298,7 @@
     margin-right: 2rem;
     margin-left: 2rem;
     border-radius: 1rem;
-    background-color: #F3F4F6;
+    background-color: #f3f4f6;
   }
 
   .input-element {
@@ -271,7 +320,7 @@
     margin-right: 2rem;
     margin-left: 2rem;
     border-radius: 1rem;
-    background-color: #F3F4F6;
+    background-color: #f3f4f6;
   }
 
   .signup-button {
@@ -279,16 +328,45 @@
     cursor: pointer !important;
   }
 
-  .login__user{
+  .login__user {
     font-size: 15px;
     margin-left: -50px !important;
   }
 
-  .logout__user{
+  .logout__user {
     font-size: 15px;
   }
 
-  .auth__page{
+  .auth__page {
     padding-top: 10rem;
+  }
+
+  .order-box{
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border: 2px solid black;
+    opacity: 90%;
+  }
+  
+  .order-img{
+    height: 300px;
+    width: 300px;
+  }
+  
+  .order-text{
+    text-align: center;
+  }
+
+  .checkout-box {
+    margin: 1rem;
+    width: auto;
+    height: auto;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border: 2px solid black;
+    opacity: 90%;
   }
 }

@@ -8,6 +8,7 @@ import WishlistPage from './pages/WishlistPage';
 import ForgotPassword from "../src/components/ForgotPassword"
 import Notfound from "./components/NotFound/Notfound"
 import {PrivateRoute} from "./controllers/PrivateRoute"
+import { OrdersPage } from './pages/OrdersPage';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="login" element={<LoginPage />}/>
                     <Route path="signup" element={<SignupPage />}/>
                     <Route path="forgot-password" element={<ForgotPassword />}/>
+                    <Route path="/orders" element={<OrdersPage />} />
                     <PrivateRoute path="cart" element={<CartPage />}/>
                     <PrivateRoute path="/wishlist" element={<WishlistPage />}/>
                     <Route path="*" element={< Notfound />}/>
