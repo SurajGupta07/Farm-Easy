@@ -1,5 +1,4 @@
 import Navbar from '../components/Header/Navbar';
-import Footer from '../components/Footer';
 import { ProductList } from '../components/Product';
 
 const HomePage = () => {
