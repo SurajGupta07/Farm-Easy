@@ -9,7 +9,7 @@ const HomePage = () => {
             <div className="product__list">
                 <ProductList />
             </div>
-            <Footer className="footer__home" />
+
         </>
     );
 };
