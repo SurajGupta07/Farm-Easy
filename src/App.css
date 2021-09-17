@@ -214,13 +214,10 @@
 .checkout-box {
     width: 20rem;
     height: auto;
+    margin-left: 1rem;
     background-color: #fff;
     border-radius: 0.25rem;
-    margin-bottom: 5rem !important;
-    margin-left: 5rem;
-    padding-left: 1rem;
     border: 2px solid black;
-    opacity: 90%;
 }
 
 .price-text {
@@ -241,12 +238,10 @@
 .order-box {
     width: 40rem;
     height: 75vh;
-    background-color: #fff;
     border-radius: 0.25rem;
     margin: auto;
     padding-left: 1rem;
     border: 2px solid black;
-    opacity: 90%;
 }
 
 .order-img {
@@ -348,13 +343,5 @@
         text-align: center;
     }
 
-    .checkout-box {
-        margin: 1rem;
-        width: auto;
-        height: auto;
-        background-color: #fff;
-        border-radius: 0.25rem;
-        border: 2px solid black;
-        opacity: 90%;
-    }
+    
 }

@@ -4,8 +4,8 @@ import { useCart } from '../contexts/CartContext';
 export const Orders = () => {
     let { orderId, paymentId } = useCart();
     return (
-        <div>
-            <div className="order-box">
+        <div className="order-box">
+            <div>
                 <img className="order-img" src={confirmedOrder} alt="order" />
                 <h2 className="order-text">Order Confirmed!</h2>
                 {orderId && (
