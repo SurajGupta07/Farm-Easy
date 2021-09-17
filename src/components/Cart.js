@@ -2,7 +2,7 @@ import { useCart } from '../contexts/CartContext';
 import { useCartAction } from '../hooks/useCartAction';
 import { useCartItems } from '../hooks/useCartItems';
 import Loader from '../src_images/loader.gif';
-// import { Checkout } from './Checkout';
+import { Checkout } from './Checkout';
 
 export function CartHeader() {
     const { itemsInCart } = useCartItems();
@@ -45,7 +45,7 @@ export function Cart() {
                     </div>
                 )}
             </ul>
-            {/* <Checkout itemsInCart={itemsInCart} /> */}
+            <Checkout itemsInCart={itemsInCart} />
         </div>
     );
 }
