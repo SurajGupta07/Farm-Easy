@@ -1,5 +1,6 @@
 import Navbar from '../components/Header/Navbar';
 import { ProductList } from '../components/Product';
+import Footer from '../components/Footer';
 
 const HomePage = () => {
     return (
@@ -8,7 +9,7 @@ const HomePage = () => {
             <div className="product__list">
                 <ProductList />
             </div>
-
+            <Footer className="footer__home" />
         </>
     );
 };
