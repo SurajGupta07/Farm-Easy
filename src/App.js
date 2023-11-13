@@ -20,8 +20,22 @@ function App() {
                     <Route path="login" element={<LoginPage />} />
                     <Route path="signup" element={<SignupPage />} />
                     <Route path="/orders" element={<OrdersPage />} />
-                    <PrivateRoute path="cart" element={<CartPage />} />
-                    <PrivateRoute path="/wishlist" element={<WishlistPage />} />
+                    <Route
+                        path="/cart"
+                        element={
+                            <PrivateRoute>
+                                <CartPage />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/wishlist"
+                        element={
+                            <PrivateRoute>
+                                <WishlistPage />
+                            </PrivateRoute>
+                        }
+                    />
                     <Route path="*" element={<Notfound />} />
                 </Routes>
             </div>

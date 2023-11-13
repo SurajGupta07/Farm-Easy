@@ -1,7 +1,7 @@
-import React from 'react';
-import { useAuth } from '../../contexts/AuthContext';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 import { useAuthActions } from '../../hooks/useAuthActions';
 
 export default function Login() {
@@ -34,7 +34,7 @@ export default function Login() {
                 <div className="error__validation">{error.password}</div>
             </div>
             <div className="links">
-                <Link href="/forgot-password">Forgot Password</Link>
+                <Link tp="/forgot-password">Forgot Password</Link>
             </div>
             <div className="login-button">
                 <button
@@ -50,7 +50,7 @@ export default function Login() {
                 </p>
             </div>
             <div className="links">
-                New user? <Link href="/signup">SignUp</Link>
+                New user? <Link to="/signup">SignUp</Link>
             </div>
             <div className="links">
                 <p>

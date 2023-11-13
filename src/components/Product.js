@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router';
 import { useCartAction } from '../hooks/useCartAction.js';
 import { useAuth } from '../contexts/AuthContext';
 import Loader from '../src_images/loader.gif';
+
 export const ProductList = () => {
     const { token } = useAuth();
     const { products } = useProduct();
     const navigate = useNavigate();
     const { addToCartOnClick, addToWishlist } = useCartAction();
+
     function getProductList({ _id }) {
         return products.map((product) => (
             <div key={product._id} className="card card-body card-spacing">
