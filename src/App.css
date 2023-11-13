@@ -1,30 +1,347 @@
-@import "https://eloquentui.netlify.app/styles/app.css";
+@import 'https://eloquentui.netlify.app/styles/app.css';
 
 .App {
-  font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.headerTitle{
-  margin-top:1rem; 
-  text-align:center;
+.headerTitle {
+    display: inline;
 }
 
-.sub-header{
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.sub-header {
+    text-align: center;
+    padding-top: 8rem;
+    margin-bottom: 1rem;
 }
 
-.item-list{
-  margin-left: 1rem;
+.main-header {
+    text-align: center;
 }
 
-.card-spacing{
-  margin-left: 10rem;
-  margin-bottom: 2rem;
-  display: inline-block;
+.card-spacing {
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+    display: inline-block;
 }
 
-.add-spacing{
-  margin-left: 1rem;
+.add-spacing {
+    margin-left: 1rem;
+}
+
+.headerLogo {
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 1rem;
+}
+
+.buttonLogo {
+    background: transparent;
+    border-color: transparent;
+    outline: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    display: inline;
+}
+
+.buttonLogo:hover {
+    background-color: #ddd6fe;
+    border-radius: 1rem;
+}
+
+.logout__user {
+    position: relative;
+    top: -20px;
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.login__user {
+    position: relative;
+    top: -20px;
+    font-weight: 500;
+    font-size: 19px;
+    color: #000;
+    text-decoration: none !important;
+}
+
+.backgroundColor {
+    background-color: #a78bfa;
+}
+
+.mainNavbar {
+    margin-top: 0px !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.footer {
+    padding-top: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1rem;
+    background-color: #a78bfa;
+    margin: auto 0;
+}
+
+.product__list {
+    padding-top: 10rem;
+}
+
+.disabled-btn {
+    cursor: not-allowed;
+    background-color: #ddd6fe !important;
+}
+
+.input-element {
+    margin: 1rem !important;
+    width: 50% !important;
+    margin-left: 25% !important;
+}
+
+.login-button {
+    margin-left: 32% !important;
+    cursor: pointer !important;
+}
+
+.signup-button {
+    margin-left: 32% !important;
+    cursor: pointer !important;
+}
+
+.links {
+    margin: 1rem;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.login-component {
+    margin-top: -1rem !important;
+    height: 25rem;
+    padding-top: 2rem;
+    margin-right: 30rem;
+    margin-left: 30rem;
+    border-radius: 1rem;
+    background-color: #f3f4f6;
+}
+
+.auth__page {
+    padding-top: 15rem;
+}
+
+.signup-component {
+    margin-top:- 1rem;
+    height: 25rem;
+    padding-top: 2rem;
+    margin-right: 30rem;
+    margin-left: 30rem;
+    border-radius: 1rem;
+    background-color: #f3f4f6;
+}
+
+/* Cart Card Buttons */
+.cssCircle {
+    border-radius: 999px;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #a78bfa;
+    border: 1px solid #aba8b4;
+    color: white;
+    text-align: center;
+}
+
+.cssCircle:hover {
+    background: #6d28d9;
+    cursor: pointer;
+}
+
+.minusSign {
+    line-height: 0.9em;
+    margin-bottom: 1rem;
+    outline: none !important;
+}
+
+.plusSign {
+    line-height: 1.1em;
+    outline: none !important;
+}
+
+.notFound {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 4rem;
+}
+
+.wishlistBtn {
+    position: absolute;
+    top: 9%;
+    left: 80%;
+    cursor: pointer;
+    border: none !important;
+    outline: none !important;
+    font-size: 1rem;
+    padding: 0.3rem;
+    background-color: #a78bfa;
+    border-radius: 1rem;
+}
+
+.wishlistBtn:hover {
+    background: #6d28d9;
+    cursor: pointer;
+}
+
+/* Errors */
+
+.error__validation {
+    font-size: 12px;
+    color: red;
+    margin-left: 150px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.loaderGif {
+    margin: auto !important;
+    height: 10rem;
+    width: 10rem;
+    margin-top: 15rem !important;
+}
+
+.checkout-box {
+    width: 20rem;
+    height: auto;
+    margin-left: 1rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    border: 2px solid black;
+}
+
+.price-text {
+    margin-top: 1rem;
+    opacity: 70%;
+    text-align: center;
+}
+
+.btn-space {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.orders {
+    margin-top: 150px;
+}
+
+.order-box {
+    width: 40rem;
+    height: 75vh;
+    border-radius: 0.25rem;
+    margin: auto;
+    padding-left: 1rem;
+    border: 2px solid black;
+}
+
+.order-img {
+    height: 400px;
+    width: 400px;
+    padding-left: 5rem;
+}
+
+.order-text {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 600px) {
+    /* Product Listing */
+    .card-spacing {
+        margin: auto !important;
+        margin-left: 30px !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Footer */
+    .footer {
+        padding-bottom: 0.2rem;
+        padding-top: 0.2rem;
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    /* Login Component */
+    .login-component {
+        height: 25rem;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        border-radius: 1rem;
+        background-color: #f3f4f6;
+    }
+
+    .input-element {
+        width: 80% !important;
+        margin-left: 2.5rem !important;
+    }
+
+    .login-button {
+        margin-left: 4.5rem !important;
+        cursor: pointer !important;
+    }
+
+    /* Signup Component */
+
+    .signup-component {
+        height: 25rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        border-radius: 1rem;
+        background-color: #f3f4f6;
+    }
+
+    .signup-button {
+        margin-left: 4.5rem !important;
+        cursor: pointer !important;
+    }
+
+    .login__user {
+        font-size: 15px;
+        margin-left: -50px !important;
+    }
+
+    .logout__user {
+        font-size: 15px;
+    }
+
+    .auth__page {
+        padding-top: 10rem;
+    }
+
+    .order-box {
+        margin: 1rem;
+        width: auto;
+        height: auto;
+        background-color: #fff;
+        border-radius: 0.25rem;
+        border: 2px solid black;
+        opacity: 90%;
+    }
+
+    .order-img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .order-text {
+        text-align: center;
+    }
+
+    
 }

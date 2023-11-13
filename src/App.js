@@ -1,33 +1,46 @@
 import './App.css';
-import React from 'react';
-import {useState} from 'react';
-import {Checkout, CartHeader, ProductList, Cart } from '../src/components/Cart'
+import { Routes, Route } from 'react-router-dom';
+import LoginPage from '../src/pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import HomePage from './pages/Home';
+import CartPage from './pages/CartPage';
+import WishlistPage from './pages/WishlistPage';
+import Notfound from './components/NotFound/Notfound';
+import { PrivateRoute } from './controllers/PrivateRoute';
+import { OrdersPage } from './pages/OrdersPage';
+import { usePersistantAuth } from './hooks/usePersistantAuth';
 
 function App() {
-  const [route, setRoute] = useState("products");
-  return (
-    <div className="App">
-      <h1 className="headerTitle">Farm Easy</h1>
-			<div className="app-body">
-				<div>
-					<button	onClick={() => setRoute("products")} className="default-button add-spacing">
-						Products
-					</button >
-          <button	onClick={() => setRoute("cart")} className="default-button add-spacing">
-						Cart
-					</button>
-					<button	onClick={() => setRoute("checkout")} className="default-button add-spacing">
-						Checkout
-					</button>
-				</div>
-				<CartHeader />
-				{ route === "checkout" && <Checkout />}
-				{route === "cart" && <Cart />}
-				{route === "products" && <ProductList />}
-			</div>
-        
-    </div>
-  );
+    usePersistantAuth();
+    return (
+        <div className="App">
+            <div className="app-body">
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="login" element={<LoginPage />} />
+                    <Route path="signup" element={<SignupPage />} />
+                    <Route path="/orders" element={<OrdersPage />} />
+                    <Route
+                        path="/cart"
+                        element={
+                            <PrivateRoute>
+                                <CartPage />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/wishlist"
+                        element={
+                            <PrivateRoute>
+                                <WishlistPage />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route path="*" element={<Notfound />} />
+                </Routes>
+            </div>
+        </div>
+    );
 }
 
 export default App;

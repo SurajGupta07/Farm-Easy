@@ -1,20 +1,30 @@
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {CartProvider} from '../src/CartContext'
+import { CartProvider } from '../src/contexts/CartContext';
+import { ProductProvider } from '../src/contexts/ProductContext';
+import { AuthProvider } from '../src/contexts/AuthContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CartProvider>
-      <App />
-    </CartProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Router>
+            <AuthProvider>
+                <CartProvider>
+                    <ProductProvider>
+                        <App />
+                    </ProductProvider>
+                </CartProvider>
+            </AuthProvider>
+        </Router>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// If you want to start measuring performance in your app, pass a function to
+// log results (for example: reportWebVitals(console.log)) or send to an
+// analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
